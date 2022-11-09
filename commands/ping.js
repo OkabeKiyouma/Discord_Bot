@@ -6,7 +6,7 @@ module.exports = {
 		.setDescription('Replies with Pong!'),
 	async execute(interaction) {
 		const sent = await interaction.reply({ content: 'Pinging...', fetchReply: true });
-		interaction.editReply(`Roundtrip latency: ${sent.createdTimestamp - interaction.createdTimestamp}ms`);
+		interaction.editReply(`Pong: ${sent.createdTimestamp - interaction.createdTimestamp}ms`);
 
 		// await interaction.reply(`Pong! ${interaction.client.ws.ping} ms`);
 	},
